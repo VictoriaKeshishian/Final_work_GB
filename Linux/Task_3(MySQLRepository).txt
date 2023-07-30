@@ -1,0 +1,195 @@
+victoria@victoria-VirtualBox:~$ sudo apt update
+Сущ:1 http://ru.archive.ubuntu.com/ubuntu jammy InRelease                                            
+Сущ:2 http://security.ubuntu.com/ubuntu jammy-security InRelease                                     
+Сущ:3 http://ru.archive.ubuntu.com/ubuntu jammy-updates InRelease                                    
+Сущ:4 http://ru.archive.ubuntu.com/ubuntu jammy-backports InRelease                                  
+Сущ:5 http://repo.mysql.com/apt/ubuntu bionic InRelease                                              
+Сущ:6 https://download.virtualbox.org/virtualbox/debian jammy InRelease                              
+Чтение списков пакетов… Готово            
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово         
+Может быть обновлено 182 пакета. Запустите «apt list --upgradable» для их показа.
+W: http://repo.mysql.com/apt/ubuntu/dists/bionic/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+victoria@victoria-VirtualBox:~$ sudo apt install -y software-properties-common
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово         
+Следующие пакеты устанавливались автоматически и больше не требуются:
+  ibverbs-providers libboost-iostreams1.74.0 libboost-thread1.74.0 libdaxctl1 libgfapi0 libgfrpc0
+  libgfxdr0 libglusterfs0 libibverbs1 libiscsi7 libndctl6 libpmem1 libpmemobj1 librdmacm1 liburing2
+Для их удаления используйте «sudo apt autoremove».
+Будут установлены следующие дополнительные пакеты:
+  python3-software-properties software-properties-gtk
+Следующие пакеты будут обновлены:
+  python3-software-properties software-properties-common software-properties-gtk
+Обновлено 3 пакетов, установлено 0 новых пакетов, для удаления отмечено 0 пакетов, и 179 пакетов не обновлено.
+Необходимо скачать 114 kB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 2 048 B.
+Пол:1 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 software-properties-common all 0.99.22.7 [14,1 kB]
+Пол:2 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 software-properties-gtk all 0.99.22.7 [71,3 kB]
+Пол:3 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3-software-properties all 0.99.22.7 [28,8 kB]
+Получено 114 kB за 12с (9 412 B/s)                                                                   
+(Чтение базы данных … на данный момент установлено 198909 файлов и каталогов.)
+Подготовка к распаковке …/software-properties-common_0.99.22.7_all.deb …
+Распаковывается software-properties-common (0.99.22.7) на замену (0.99.22.5) …
+Подготовка к распаковке …/software-properties-gtk_0.99.22.7_all.deb …
+Распаковывается software-properties-gtk (0.99.22.7) на замену (0.99.22.5) …
+Подготовка к распаковке …/python3-software-properties_0.99.22.7_all.deb …
+Распаковывается python3-software-properties (0.99.22.7) на замену (0.99.22.5) …
+Настраивается пакет python3-software-properties (0.99.22.7) …
+Настраивается пакет software-properties-common (0.99.22.7) …
+Настраивается пакет software-properties-gtk (0.99.22.7) …
+Обрабатываются триггеры для dbus (1.12.20-2ubuntu4.1) …
+Обрабатываются триггеры для shared-mime-info (2.1-2) …
+Обрабатываются триггеры для mailcap (3.70+nmu1ubuntu1) …
+Обрабатываются триггеры для desktop-file-utils (0.26-1ubuntu3) …
+Обрабатываются триггеры для hicolor-icon-theme (0.17-2) …
+Обрабатываются триггеры для gnome-menus (3.36.0-1ubuntu3) …
+Обрабатываются триггеры для libglib2.0-0:amd64 (2.72.4-0ubuntu2.2) …
+Обрабатываются триггеры для man-db (2.10.2-1) …
+victoria@victoria-VirtualBox:~$ sudo add-apt-repository -y 'deb http://repo.mysql.com/apt/ubuntu/ jammy mysql-8.0'
+Репозиторий: 'deb http://repo.mysql.com/apt/ubuntu/ jammy mysql-8.0'
+Описание:
+Archive for codename: jammy components: mysql-8.0
+Дополнительные сведения: http://repo.mysql.com/apt/ubuntu/
+Добавление репозитория.
+Adding deb entry to /etc/apt/sources.list.d/archive_uri-http_repo_mysql_com_apt_ubuntu_-jammy.list
+Adding disabled deb-src entry to /etc/apt/sources.list.d/archive_uri-http_repo_mysql_com_apt_ubuntu_-jammy.list
+Сущ:1 http://repo.mysql.com/apt/ubuntu bionic InRelease                                              
+Сущ:2 http://ru.archive.ubuntu.com/ubuntu jammy InRelease                                            
+Сущ:3 http://security.ubuntu.com/ubuntu jammy-security InRelease                                     
+Сущ:4 https://download.virtualbox.org/virtualbox/debian jammy InRelease                              
+Сущ:5 http://ru.archive.ubuntu.com/ubuntu jammy-updates InRelease                                    
+Пол:6 http://repo.mysql.com/apt/ubuntu jammy InRelease [20,3 kB]                  
+Сущ:7 http://ru.archive.ubuntu.com/ubuntu jammy-backports InRelease               
+Пол:8 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 Packages [12,7 kB]
+Получено 32,9 kB за 3с (11,6 kB/s)    
+Чтение списков пакетов… Готово
+W: http://repo.mysql.com/apt/ubuntu/dists/bionic/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+W: http://repo.mysql.com/apt/ubuntu/dists/jammy/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+victoria@victoria-VirtualBox:~$ sudo apt update
+Сущ:1 http://security.ubuntu.com/ubuntu jammy-security InRelease                                     
+Сущ:2 http://repo.mysql.com/apt/ubuntu bionic InRelease                                              
+Сущ:3 http://ru.archive.ubuntu.com/ubuntu jammy InRelease                                            
+Сущ:4 https://download.virtualbox.org/virtualbox/debian jammy InRelease                              
+Сущ:5 http://ru.archive.ubuntu.com/ubuntu jammy-updates InRelease                                    
+Сущ:6 http://repo.mysql.com/apt/ubuntu jammy InRelease                            
+Сущ:7 http://ru.archive.ubuntu.com/ubuntu jammy-backports InRelease               
+Чтение списков пакетов… Готово            
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово         
+Может быть обновлено 179 пакетов. Запустите «apt list --upgradable» для их показа.
+W: http://repo.mysql.com/apt/ubuntu/dists/bionic/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+W: http://repo.mysql.com/apt/ubuntu/dists/jammy/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+victoria@victoria-VirtualBox:~$ udo apt install -y mysql-server
+Команда «udo» не найдена, но может быть установлена с помощью:
+sudo apt install udo
+victoria@victoria-VirtualBox:~$ sudo apt install -y mysql-server
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово         
+Следующие пакеты устанавливались автоматически и больше не требуются:
+  ibverbs-providers libboost-iostreams1.74.0 libboost-thread1.74.0 libcgi-fast-perl libcgi-pm-perl
+  libdaxctl1 libevent-core-2.1-7 libevent-pthreads-2.1-7 libfcgi-bin libfcgi-perl libfcgi0ldbl
+  libgfapi0 libgfrpc0 libgfxdr0 libglusterfs0 libhtml-template-perl libibverbs1 libiscsi7 libndctl6
+  libpmem1 libpmemobj1 libprotobuf-lite23 librdmacm1 liburing2
+Для их удаления используйте «sudo apt autoremove».
+Будут установлены следующие дополнительные пакеты:
+  mysql-client mysql-common mysql-community-client mysql-community-client-core
+  mysql-community-client-plugins mysql-community-server mysql-community-server-core
+Следующие пакеты будут УДАЛЕНЫ:
+  mysql-client-8.0 mysql-client-core-8.0 mysql-server-8.0 mysql-server-core-8.0
+Следующие НОВЫЕ пакеты будут установлены:
+  mysql-client mysql-community-client mysql-community-client-core mysql-community-client-plugins
+  mysql-community-server mysql-community-server-core
+Следующие пакеты будут обновлены:
+  mysql-common mysql-server
+Обновлено 2 пакетов, установлено 6 новых пакетов, для удаления отмечено 4 пакетов, и 173 пакетов не обновлено.
+Необходимо скачать 30,7 MB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 32,7 MB.
+Пол:1 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 mysql-server amd64 8.0.34-1ubuntu22.04 [66,4 kB]
+Пол:2 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 mysql-common amd64 8.0.34-1ubuntu22.04 [67,7 kB]
+Пол:3 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 mysql-community-client amd64 8.0.34-1ubuntu22.04 [2 113 kB]
+Пол:4 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 mysql-community-client-plugins amd64 8.0.34-1ubuntu22.04 [1 435 kB]
+Пол:5 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 mysql-community-client-core amd64 8.0.34-1ubuntu22.04 [2 087 kB]
+Пол:6 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 mysql-client amd64 8.0.34-1ubuntu22.04 [66,4 kB]
+Пол:7 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 mysql-community-server-core amd64 8.0.34-1ubuntu22.04 [24,8 MB]
+Пол:8 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 mysql-community-server amd64 8.0.34-1ubuntu22.04 [78,2 kB]
+Получено 30,7 MB за 21с (1 460 kB/s)                                                                 
+Предварительная настройка пакетов …
+(Чтение базы данных … на данный момент установлено 198909 файлов и каталогов.)
+Подготовка к распаковке …/mysql-server_8.0.34-1ubuntu22.04_amd64.deb …
+Распаковывается mysql-server (8.0.34-1ubuntu22.04) на замену (8.0.33-0ubuntu0.22.04.2) …
+(Чтение базы данных … на данный момент установлено 198913 файлов и каталогов.)
+Удаляется mysql-server-8.0 (8.0.33-0ubuntu0.22.04.2) …
+update-alternatives: используется /etc/mysql/my.cnf.fallback для предоставления /etc/mysql/my.cnf (my.
+cnf) в автоматическом режиме
+Удаляется mysql-server-core-8.0 (8.0.33-0ubuntu0.22.04.2) …
+dpkg: mysql-client-core-8.0: имеются проблемы с зависимостями, но по вашему указанию
+он всё равно будет удалён:
+ mysql-client-8.0 зависит от mysql-client-core-8.0.
+
+Удаляется mysql-client-core-8.0 (8.0.33-0ubuntu0.22.04.2) …
+dpkg: mysql-client-8.0: имеются проблемы с зависимостями, но по вашему указанию
+он всё равно будет удалён:
+ dbconfig-mysql зависит от default-mysql-client | virtual-mysql-client, однако:
+  Пакет default-mysql-client не установлен.
+  Пакет virtual-mysql-client не установлен.
+  Пакет mysql-client-8.0 предоставляет virtual-mysql-client, но должен быть удалён.
+
+Удаляется mysql-client-8.0 (8.0.33-0ubuntu0.22.04.2) …
+(Чтение базы данных … на данный момент установлено 198710 файлов и каталогов.)
+Подготовка к распаковке …/0-mysql-common_8.0.34-1ubuntu22.04_amd64.deb …
+Распаковывается mysql-common (8.0.34-1ubuntu22.04) на замену (5.8+1.0.8) …
+Выбор ранее не выбранного пакета mysql-community-client.
+Подготовка к распаковке …/1-mysql-community-client_8.0.34-1ubuntu22.04_amd64.deb …
+Распаковывается mysql-community-client (8.0.34-1ubuntu22.04) …
+Выбор ранее не выбранного пакета mysql-community-client-plugins.
+Подготовка к распаковке …/2-mysql-community-client-plugins_8.0.34-1ubuntu22.04_amd64.deb …
+Распаковывается mysql-community-client-plugins (8.0.34-1ubuntu22.04) …
+Выбор ранее не выбранного пакета mysql-community-client-core.
+Подготовка к распаковке …/3-mysql-community-client-core_8.0.34-1ubuntu22.04_amd64.deb …
+Распаковывается mysql-community-client-core (8.0.34-1ubuntu22.04) …
+Выбор ранее не выбранного пакета mysql-client.
+Подготовка к распаковке …/4-mysql-client_8.0.34-1ubuntu22.04_amd64.deb …
+Распаковывается mysql-client (8.0.34-1ubuntu22.04) …
+Выбор ранее не выбранного пакета mysql-community-server-core.
+Подготовка к распаковке …/5-mysql-community-server-core_8.0.34-1ubuntu22.04_amd64.deb …
+Распаковывается mysql-community-server-core (8.0.34-1ubuntu22.04) …
+Выбор ранее не выбранного пакета mysql-community-server.
+Подготовка к распаковке …/6-mysql-community-server_8.0.34-1ubuntu22.04_amd64.deb …
+Распаковывается mysql-community-server (8.0.34-1ubuntu22.04) …
+Настраивается пакет mysql-common (8.0.34-1ubuntu22.04) …
+Устанавливается новая версия файла настройки /etc/mysql/conf.d/mysql.cnf …
+Устанавливается новая версия файла настройки /etc/mysql/my.cnf.fallback …
+Настраивается пакет mysql-community-server-core (8.0.34-1ubuntu22.04) …
+Настраивается пакет mysql-community-client-plugins (8.0.34-1ubuntu22.04) …
+Настраивается пакет mysql-community-client-core (8.0.34-1ubuntu22.04) …
+Настраивается пакет mysql-community-client (8.0.34-1ubuntu22.04) …
+Настраивается пакет mysql-client (8.0.34-1ubuntu22.04) …
+Настраивается пакет mysql-community-server (8.0.34-1ubuntu22.04) …
+Устанавливается новая версия файла настройки /etc/apparmor.d/usr.sbin.mysqld …
+Устанавливается новая версия файла настройки /etc/mysql/mysql.cnf …
+Устанавливается новая версия файла настройки /etc/mysql/mysql.conf.d/mysqld.cnf …
+update-alternatives: используется /etc/mysql/mysql.cnf для предоставления /etc/mysql/my.cnf (my.cnf) в
+ автоматическом режиме
+Настраивается пакет mysql-server (8.0.34-1ubuntu22.04) …
+Обрабатываются триггеры для man-db (2.10.2-1) …
+Обрабатываются триггеры для libc-bin (2.35-0ubuntu3.1) …
+victoria@victoria-VirtualBox:~$ sudo systemctl status mysql
+● mysql.service - MySQL Community Server
+     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sat 2023-07-29 11:09:42 +04; 28s ago
+       Docs: man:mysqld(8)
+             http://dev.mysql.com/doc/refman/en/using-systemd.html
+   Main PID: 12331 (mysqld)
+     Status: "Server is operational"
+      Tasks: 38 (limit: 2262)
+     Memory: 475.7M
+        CPU: 2.264s
+     CGroup: /system.slice/mysql.service
+             └─12331 /usr/sbin/mysqld
+
+июл 29 11:09:33 victoria-VirtualBox systemd[1]: Starting MySQL Community Server...
+июл 29 11:09:42 victoria-VirtualBox systemd[1]: Started MySQL Community Server.
+

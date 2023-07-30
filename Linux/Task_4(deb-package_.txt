@@ -1,0 +1,54 @@
+victoria@victoria-VirtualBox:~$ wget http://mirrors.kernel.org/ubuntu/pool/main/h/htop/htop_3.2.1-1_amd64.deb
+--2023-07-29 11:26:48--  http://mirrors.kernel.org/ubuntu/pool/main/h/htop/htop_3.2.1-1_amd64.deb
+Распознаётся mirrors.kernel.org (mirrors.kernel.org)… 139.178.88.99, 2604:1380:45e3:2400::1
+Подключение к mirrors.kernel.org (mirrors.kernel.org)|139.178.88.99|:80... соединение установлено.
+HTTP-запрос отправлен. Ожидание ответа… 301 Moved Permanently
+Адрес: http://mirrors.edge.kernel.org/ubuntu/pool/main/h/htop/htop_3.2.1-1_amd64.deb [переход]
+--2023-07-29 11:26:49--  http://mirrors.edge.kernel.org/ubuntu/pool/main/h/htop/htop_3.2.1-1_amd64.deb
+Распознаётся mirrors.edge.kernel.org (mirrors.edge.kernel.org)… 147.75.199.223, 2604:1380:45d1:ec00::1
+Подключение к mirrors.edge.kernel.org (mirrors.edge.kernel.org)|147.75.199.223|:80... соединение установлено.
+HTTP-запрос отправлен. Ожидание ответа… 200 OK
+Длина: 152258 (149K) [application/octet-stream]
+Сохранение в: ‘htop_3.2.1-1_amd64.deb’
+
+htop_3.2.1-1_amd64.deb             100%[================================================================>] 148,69K  19,8KB/s    за 8,4s    
+
+2023-07-29 11:26:58 (17,7 KB/s) - ‘htop_3.2.1-1_amd64.deb’ сохранён [152258/152258]
+
+victoria@victoria-VirtualBox:~$ sudo apt-get install -f
+[sudo] пароль для victoria: 
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово         
+Следующие пакеты устанавливались автоматически и больше не требуются:
+  ibverbs-providers libboost-iostreams1.74.0 libboost-thread1.74.0 libcgi-fast-perl libcgi-pm-perl libdaxctl1 libevent-core-2.1-7
+  libevent-pthreads-2.1-7 libfcgi-bin libfcgi-perl libfcgi0ldbl libgfapi0 libgfrpc0 libgfxdr0 libglusterfs0 libhtml-template-perl
+  libibverbs1 libiscsi7 libndctl6 libpmem1 libpmemobj1 libprotobuf-lite23 librdmacm1 liburing2
+Для их удаления используйте «sudo apt autoremove».
+Обновлено 0 пакетов, установлено 0 новых пакетов, для удаления отмечено 0 пакетов, и 173 пакетов не обновлено.
+victoria@victoria-VirtualBox:~$ sudo dpkg -i htop_3.2.1-1_amd64.deb
+Выбор ранее не выбранного пакета htop.
+(Чтение базы данных … на данный момент установлено 198977 файлов и каталогов.)
+Подготовка к распаковке htop_3.2.1-1_amd64.deb …
+Распаковывается htop (3.2.1-1) …
+Настраивается пакет htop (3.2.1-1) …
+Обрабатываются триггеры для mailcap (3.70+nmu1ubuntu1) …
+Обрабатываются триггеры для gnome-menus (3.36.0-1ubuntu3) …
+Обрабатываются триггеры для desktop-file-utils (0.26-1ubuntu3) …
+Обрабатываются триггеры для hicolor-icon-theme (0.17-2) …
+Обрабатываются триггеры для man-db (2.10.2-1) …
+victoria@victoria-VirtualBox:~$ dpkg -l | grep htop
+ii  htop                                       3.2.1-1                                 amd64        interactive processes viewer
+victoria@victoria-VirtualBox:~$ sudo dpkg --purge htop
+(Чтение базы данных … на данный момент установлено 198987 файлов и каталогов.)
+Удаляется htop (3.2.1-1) …
+Обрабатываются триггеры для man-db (2.10.2-1) …
+Обрабатываются триггеры для hicolor-icon-theme (0.17-2) …
+Обрабатываются триггеры для mailcap (3.70+nmu1ubuntu1) …
+Обрабатываются триггеры для gnome-menus (3.36.0-1ubuntu3) …
+Обрабатываются триггеры для desktop-file-utils (0.26-1ubuntu3) …
+victoria@victoria-VirtualBox:~$ dpkg -l | grep htop
+victoria@victoria-VirtualBox:~$ 
+
+
+

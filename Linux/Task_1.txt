@@ -1,0 +1,31 @@
+victoria@victoria-VirtualBox:~$ cat >Домашние_животные.txt
+Собаки
+Кошки
+Хомяки
+victoria@victoria-VirtualBox:~$ cat >Вьючные_животные.txt
+Лошади
+Верблюды
+Ослы
+victoria@victoria-VirtualBox:~$ cat Домашние_животные.txt Вьючные_животные.txt > file3.txt
+victoria@victoria-VirtualBox:~$ cat file3.txt
+Собаки
+Кошки
+Хомяки
+Лошади
+Верблюды
+Ослы
+victoria@victoria-VirtualBox:~$ mv file3.txt Друзья_человека.txt
+victoria@victoria-VirtualBox:~$ cat Друзья_человека.txt
+Собаки
+Кошки
+Хомяки
+Лошади
+Верблюды
+Ослы
+victoria@victoria-VirtualBox:~$ mkdir Друзья_человека
+victoria@victoria-VirtualBox:~$ mv Друзья_человека.txt Друзья_человека
+victoria@victoria-VirtualBox:~$ cd  Друзья_человека
+victoria@victoria-VirtualBox:~/Друзья_человека$ ls -l
+итого 4
+-rw-rw-r-- 1 victoria victoria 76 июл 29 09:40 Друзья_человека.txt
+
